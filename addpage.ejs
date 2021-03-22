@@ -1,0 +1,29 @@
+<%- include ('header')%>
+<div class="container">
+
+  
+
+  <ul>
+    <li><%= dataFromdb%></li>
+  </ul>
+  
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">loan amount</th>
+            <th scope="col">loan date</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <%dataFromdb.forEach(function(obj){%>
+            <tr>
+              <td><%=obj._id%></td>
+              <td><%=obj.loan_amount%></td>
+              <td><%=obj.loan_date%></td>
+            </tr>
+            <%})%>
+        </tbody>
+      </table>
+</div>
